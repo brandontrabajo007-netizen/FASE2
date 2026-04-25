@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repartos Rapidos SAS | Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="admin">
+    <div class="fondo-decorativo fondo-uno"></div>
+    <div class="fondo-decorativo fondo-dos"></div>
+
+    <header class="topbar">
+      <div class="marca">
+        <span class="marca-badge">RR</span>
+        <div>
+          <h1>Dashboard de Envios</h1>
+          <p>Control de estado en tiempo real</p>
+        </div>
+      </div>
+      <nav>
+        <a class="nav-link" href="index.html">Registrar</a>
+        <a class="nav-link active" href="admin.html">Dashboard</a>
+        <a class="nav-link" href="rastreo.html">Rastreo</a>
+      </nav>
+    </header>
+
+    <main class="contenedor">
+      <section class="card">
+        <h2>Resumen</h2>
+        <div id="resumen-estados" class="resumen-grid"></div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Paquetes registrados</h2>
+          <button id="btn-recargar" class="btn btn-secundario" type="button">
+            Recargar
+          </button>
+        </div>
+
+        <p id="mensaje-admin" class="mensaje oculto"></p>
+
+        <div class="tabla-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Guia</th>
+                <th>Remitente</th>
+                <th>Destinatario</th>
+                <th>Direccion</th>
+                <th>Estado</th>
+                <th>Accion</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-paquetes"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

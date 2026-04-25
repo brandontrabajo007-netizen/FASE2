@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repartos Rapidos SAS | Rastreo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="rastreo">
+    <div class="fondo-decorativo fondo-uno"></div>
+    <div class="fondo-decorativo fondo-dos"></div>
+
+    <header class="topbar">
+      <div class="marca">
+        <span class="marca-badge">RR</span>
+        <div>
+          <h1>Rastreo Publico</h1>
+          <p>Consulta el estado de un envio por su numero de guia</p>
+        </div>
+      </div>
+      <nav>
+        <a class="nav-link" href="index.html">Registrar</a>
+        <a class="nav-link" href="admin.html">Dashboard</a>
+        <a class="nav-link active" href="rastreo.html">Rastreo</a>
+      </nav>
+    </header>
+
+    <main class="contenedor">
+      <section class="card card-rastreo">
+        <h2>Consultar envio</h2>
+        <form id="form-rastreo" class="fila-rastreo">
+          <input
+            type="text"
+            id="numeroGuiaConsulta"
+            placeholder="Ej: RR123456"
+            required
+          />
+          <button class="btn btn-principal" type="submit">Buscar</button>
+        </form>
+        <p id="mensaje-rastreo" class="mensaje oculto"></p>
+        <div id="resultado-rastreo"></div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repartos Rapidos SAS | Registro de Envios</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="registro">
+    <div class="fondo-decorativo fondo-uno"></div>
+    <div class="fondo-decorativo fondo-dos"></div>
+
+    <header class="topbar">
+      <div class="marca">
+        <span class="marca-badge">RR</span>
+        <div>
+          <h1>Repartos Rapidos SAS</h1>
+          <p>Plataforma de gestion y rastreo de envios</p>
+        </div>
+      </div>
+      <nav>
+        <a class="nav-link active" href="index.html">Registrar</a>
+        <a class="nav-link" href="admin.html">Dashboard</a>
+        <a class="nav-link" href="rastreo.html">Rastreo</a>
+      </nav>
+    </header>
+
+    <main class="contenedor">
+      <section class="card card-form">
+        <h2>Nuevo envio</h2>
+        <p class="subtitulo">
+          Completa los datos para crear un paquete. Si no indicas guia, se
+          genera automaticamente.
+        </p>
+
+        <form id="form-registro" class="form-grid">
+          <div class="campo">
+            <label for="numeroGuia">Numero de guia (opcional)</label>
+            <input
+              type="text"
+              id="numeroGuia"
+              name="numeroGuia"
+              placeholder="Ej: RR123456"
+              maxlength="20"
+            />
+          </div>
+
+          <div class="campo">
+            <label for="remitente">Remitente</label>
+            <input type="text" id="remitente" name="remitente" required />
+          </div>
+
+          <div class="campo">
+            <label for="destinatario">Destinatario</label>
+            <input type="text" id="destinatario" name="destinatario" required />
+          </div>
+
+          <div class="campo campo-full">
+            <label for="direccionDestino">Direccion destino</label>
+            <input
+              type="text"
+              id="direccionDestino"
+              name="direccionDestino"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-principal">Crear envio</button>
+        </form>
+
+        <p id="mensaje-registro" class="mensaje oculto"></p>
+      </section>
+    </main>
+  </body>
+</html>
