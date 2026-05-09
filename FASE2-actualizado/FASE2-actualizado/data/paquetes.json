@@ -1,0 +1,21 @@
+[
+  {
+    "numeroGuia": "13273574",
+    "remitente": "hola",
+    "destinatario": "pepe",
+    "direccionDestino": "calee 10",
+    "estado": "En ruta",
+    "fechaCreacion": "2026-04-25T15:53:21.588Z",
+    "fechaActualizacion": "2026-04-25T15:53:46.580Z",
+    "historial": [
+      {
+        "estado": "Pendiente",
+        "fecha": "2026-04-25T15:53:21.588Z"
+      },
+      {
+        "estado": "En ruta",
+        "fecha": "2026-04-25T15:53:46.580Z"
+      }
+    ]
+  }
+]
