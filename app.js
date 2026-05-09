@@ -49,6 +49,34 @@ function textoValido(valor) {
 function buscarPaquetePorGuia(guia) {
   return paquetes.find((paquete) => paquete.numeroGuia === guia);
 }
+function generarResumenPaquetes() {
+  const resumenPorEstado = ESTADOS_VALIDOS.reduce((resumen, estado) => {
+    resumen[estado] = 0;
+    return resumen;
+  }, {});
+
+  let ultimaActualizacion = null;
+
+  paquetes.forEach((paquete) => {
+    if (resumenPorEstado[paquete.estado] !== undefined) {
+      resumenPorEstado[paquete.estado]++;
+    }
+
+    if (
+      paquete.fechaActualizacion &&
+      (!ultimaActualizacion ||
+        new Date(paquete.fechaActualizacion) > new Date(ultimaActualizacion))
+    ) {
+      ultimaActualizacion = paquete.fechaActualizacion;
+    }
+  });
+
+  return {
+    totalPaquetes: paquetes.length,
+    porEstado: resumenPorEstado,
+    ultimaActualizacion,
+  };
+}
 
 app.post("/api/paquetes", async (req, res) => {
   try {
