@@ -116,3 +116,9 @@ No usa base de datos.
 
 - Proyecto pensado para entorno local y desarrollo academico.
 - Todo corre en un solo servidor Express.
+
+## Participantes
+
+Juan Carlos Suarez
+Brandon Velandia
+Alejandro Vanegas
